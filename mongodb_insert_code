@@ -1,0 +1,60 @@
+npm install express
+npm install mongo
+npm install body-parser  // if post method
+
+html file:
+=========
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:9000/mongoinsertfun">
+       Enter Reg Number  :<input type="text" name="t1"><br>
+       Enter Student Name:<input type="text" name="t2"><br>
+       Enter Student Mark:<input type="text" name="t3"><br>
+        <input type="submit" value="Insert object to mongodb">
+    </form>
+</body>
+</html>
+
+.js file:
+=========
+
+var express=require('express')
+var app=express()
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+app.get('/mongoinsertfun',function(req,res){
+res.send(" insert json object ")
+
+var sno=req.query["t1"]
+var sname=req.query["t2"]
+var mark=req.query["t3"]
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("mydb");
+//  var myobj={rno:1001,name:'gowthaman',mark:89};
+var myobj={rno:sno,name:sname,mark:mark};
+  dbo.collection("arun").insertOne(myobj, function(err, res) {
+    if (err) throw err;    
+    console.log("inserted succes!!!");
+    db.close();    
+  });
+});
+})
+var ser=app.listen(9000,function(){
+        var port=ser.address().port
+        console.log("app listing %s...................",port)
+})
+
+run procedure:
+==============
+node **.js
+copy html path ---> pasted browser
