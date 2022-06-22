@@ -1,0 +1,31 @@
+components of a Node.js application. A Node.js application consists of the following three important components :
+Import required modules − We use the require directive to load Node.js modules.
+=======================
+Create server − A server which will listen to client's requests similar to Apache HTTP Server.
+==============
+Read request and return response − 
+===================================
+The server created in an earlier step will read the HTTP request made by the client which can be a browser or a console and return the response.
+
+simple program:
+===============
+var http = require("http");
+
+http.createServer(function (request, response) {
+   // Send the HTTP header 
+   // HTTP Status: 200 : OK
+   // Content Type: text/plain
+   response.writeHead(200, {'Content-Type': 'text/plain'});
+   
+   // Send the response body as "Hello World"
+   response.end('Hello World\n');
+}).listen(8081);
+
+// Console will print the message
+console.log('Server running at http://127.0.0.1:8081/');
+=======================
+$ node main.js
+
+browser:
+==========
+http://127.0.0.1:8081 ( port range 0 to 65535)
