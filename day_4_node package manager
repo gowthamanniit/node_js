@@ -1,0 +1,42 @@
+$ npm --version
+2.7.1
+--------------------------
+update latest
+
+$ sudo npm install npm -g
+/usr/bin/npm -> /usr/lib/node_modules/npm/bin/npm-cli.js
+npm@2.7.1 /usr/lib/node_modules/npm
+---------------------------
+install modules using npm
+$ npm install <Module Name>
+
+---------------------------
+$ npm install express
+example-------------------famous Node.js web framework module called express −----------------
+var express = require('express');
+---------------------------
+$ npm install express -g (global installation)
+------------------------------
+$ npm uninstall express
+------------------------------
+$ npm update express
+$ npm search express
+---------------------------
+create module
+==============
+$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sane defaults.
+
+-
+Once package.json is generated, use the following command to register yourself with NPM repository site using a valid email address.
+
+$ npm adduser
+Username: mcmohd
+Password:
+Email:
+----------
+It is time now to publish your module −
+
+$ npm publish
+If everything is fine with your module, then it will be published in the repository and will be accessible to install using NPM like any other Node.js module.
