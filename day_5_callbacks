@@ -1,0 +1,37 @@
+What is Callback?
+Callback is an asynchronous equivalent for a function.
+
+All the APIs of Node are written in such a way that they support callbacks
+
+two types:
+==========
+1) Blocking code
+2) Non-Blocking code(-Node.js highly scalable, as it can process a high number of requests without waiting or no block for any function to return results.
+                     -content of the file must be parameter)
+                     
+ex: blocking code:
+==================
+main.js
+========
+var fs = require("fs");
+var data = fs.readFileSync('input.txt');
+
+console.log(data.toString());
+console.log("Program Ended");
+
+run: node main.js
+==================
+
+ex: non-blocking code:
+=======================
+var fs = require("fs");
+
+fs.readFile('input.txt', function (err, data) {
+   if (err) return console.error(err);
+   console.log(data.toString());
+});
+
+console.log("Program Ended");
+
+run: node main.js
+output: first will be print: program ended
