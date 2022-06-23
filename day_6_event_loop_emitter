@@ -7,6 +7,8 @@ callback functions are called when an asynchronous function returns its result
 Node.js has multiple in-built events available through events module and 
 EventEmitter class which are used to bind events and event-listeners
 
+EventEmitter provides multiple properties like on and emit. 
+on property is used to bind a function with the event and emit is used to fire an event.
 -----------------------------------------------
 // Import events module
 var events = require('events');
