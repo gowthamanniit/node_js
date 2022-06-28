@@ -3,9 +3,8 @@ $ npm --version
 --------------------------
 update latest
 
-$ sudo npm install npm -g
-/usr/bin/npm -> /usr/lib/node_modules/npm/bin/npm-cli.js
-npm@2.7.1 /usr/lib/node_modules/npm
+$  npm install npm -g
+
 ---------------------------
 install modules using npm
 $ npm install <Module Name>
