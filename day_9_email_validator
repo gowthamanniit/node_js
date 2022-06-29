@@ -1,0 +1,9 @@
+npm i email-validator
+
+
+const emailvalidator = require("email-validator");
+if(emailvalidator.validate(req.body.email)){
+      // Your call to model here
+}else{
+   res.status(400).send('Invalid Email');
+}
