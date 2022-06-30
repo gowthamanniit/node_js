@@ -1,0 +1,48 @@
+// Global.js   (a=value  or global.a=value or GLOBAL.a=value )
+==============
+
+global.globalString = "This can be accessed anywhere!";
+console.log(globalString); // Output: "This can be accessed anywhere!"
+
+globalString = "Check me out now";
+console.log(globalString); // Output: "Check me out now"
+
+globalString = undefined;
+console.log(globalString); // Output: undefined
+
+
+// Example.js
+ ===============
+// We can use the global we created in Global.js in this file 
+// as well.
+console.log(globalString); // Output: undefined
+ 
+globalString = “We can change it too!"; 
+console.log(globalString); // Output: "We can change it too!"
+
+==============================================
+global.var = require("........")
+ex:
+global.app = require("express")
+==================================================
+
+ if the variable is already define by simply check
+ -------------------------------------------------
+ if (!global.app){
+  global.app = require('express');
+}
+================================================
+A list of Node.js global objects are given below:
+
+__dirname
+__filename
+Console
+Process
+Buffer
+setImmediate(callback[, arg][, ...])
+setInterval(callback, delay[, arg][, ...])
+setTimeout(callback, delay[, arg][, ...])
+clearImmediate(immediateObject)
+clearInterval(intervalObject)
+clearTimeout(timeoutObject)
+ 
