@@ -82,3 +82,11 @@ buffer length:
 ==============
 var buffer = new Buffer('Learn Programming');
 console.log("buffer length: " + buffer.length);
+
+=======================================================new version =====================================================
+
+buf=new Buffer.alloc(250)
+len=buf.write("welcome to gowthaman")
+console.log(len)
+output: 20
+=============================
