@@ -1,0 +1,31 @@
+global1.js
+===========
+var name1="gowthaman"
+exports.name=name1
+global2.js
+==========
+var ans=require('./global1.js')
+console.log(ans.name)
+============================================================================
+If we need to share multiple variables use the below format
+
+//global1.js
+   let name='gowthaman';
+   let city='karur';
+   let company='lw';
+
+   module.exports={                //json
+    name,
+    city,
+    company
+  }
+  //global2.js
+  -----------
+  var ans=require('./global1.js')
+console.log(ans.name)
+console.log(ans.city)
+console.log(ans.company)
+----------or-----global2.js--------------------------
+   require('./global1');
+   console.log(name); // print 'gowthaman'
+   console.log(city); // print 'karur'
