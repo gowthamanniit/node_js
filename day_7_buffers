@@ -85,8 +85,28 @@ console.log("buffer length: " + buffer.length);
 
 =======================================================new version =====================================================
 
-buf=new Buffer.alloc(250)
+buf=new Buffer.alloc(250)                      syntax:  Buffer.alloc(size, fill, encoding);
+console.log(buf);  // output: default all value 00
 len=buf.write("welcome to gowthaman")
 console.log(len)
 output: 20
+var buf = Buffer.alloc(15, 'a');
+console.log(buf);                             
+output: <Buffer 61 61 61 ....................>
 =============================
+var buf = Buffer.allocUnsafe(15);
+console.log(buf);  // output: garbage or old buffers value (unsafe)
+buf.fill(0);   // empty the butter : all value set to 0
+console.log(buf) // all values 00
+=============================
+var buf = Buffer.from('abcdef');
+buf.write('qq',2);                             syntax: buffer.write(value, start, bytes, encoding);
+console.log(buf.toString());                   syntax: buffer.toString(encoding, start, end);
+output: abqqef
+var buf = Buffer.from('abcdef');
+for (x of buf.values()) {
+  console.log(x);
+}
+o/p 97 98 99....
+=============================
+
