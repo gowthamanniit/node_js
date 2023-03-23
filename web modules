@@ -1,0 +1,16 @@
+var http=require('http')
+var url=require('url')
+var fs=require('fs')
+http.createServer(function(req,res){
+    console.log("test")
+    var path=url.parse(req.url).pathname   // find out which file is running 
+    console.log("path name:",path) // terminal print
+    //res.write(path) //browser print
+    fs.readFile(path.substring(1),function(err,data){
+        //if (err) throw err;
+        res.write(data) //browser print
+        console.log(data.toString())
+        res.end() // must
+    })    
+}).listen(8081)
+console.log("server is listening at port number: 8081")
