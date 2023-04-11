@@ -1,0 +1,110 @@
+Web-Socket in Node.js
+=======================
+What is a Web Socket? 
+Web Socket is a protocol that provides full-duplex(multiway) communication 
+i.e allows communication in both directions simultaneously. 
+It is a modern web technology in which there is a continuous connection between the user’s browser(client) and the server. 
+In this type of communication, between the web server and the web browser, both of them can send messages to each other at any point in time.
+
+npm install socket.io --save
+ npm install express --save
+ 
+ server side javascript file:
+ ===========================
+ const express = require('express'); // using express
+const socketIO = require('socket.io');
+const http = require('http')
+const port = process.env.PORT||3000 // setting the port
+let app = express();
+let server = http.createServer(app)
+let io = socketIO(server)
+
+app.get("/", (req, res) => {
+res.sendFile(__dirname + "/client-side.html");
+});
+
+server.listen(port);
+
+
+client side javascript file:
+=============================
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+
+	<title>ChatApp</title>
+</head>
+<body class="chat">
+		<form id='message-form'>
+		<input name='message' type="text"placeholder="Message"
+				autofocus autocomplete="off"/>
+		<button >Send</button>
+		</form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var socket=io()
+
+// connection with server
+socket.on('connect', function(){
+console.log('Connected to Server')
+
+});
+
+// message listener from server
+socket.on('newMessage', function(message){
+console.log(message);
+});
+
+// emits message from user side
+socket.emit('createMessage', {
+to:'john@ds',
+text:'what kjkljd'
+});
+
+// when disconnected from server
+socket.on('disconnect', function(){
+console.log('Disconnect from server')
+});
+</script>
+</body>
+</html>
+
+server side:
+=============
+const express=require('express');
+const socketIO=require('socket.io');
+const http=require('http')
+const port=process.env.PORT||3000
+var app=express();
+let server = http.createServer(app);
+var io=socketIO(server);
+
+// make connection with user from server side
+io.on('connection', (socket)=>{
+console.log('New user connected');
+//emit message from server to user
+socket.emit('newMessage', {
+	from:'jen@mds',
+	text:'hepppp',
+	createdAt:123
+});
+
+// listen for message from user
+socket.on('createMessage', (newMessage)=>{
+	console.log('newMessage', newMessage);
+});
+
+// when server disconnects from user
+socket.on('disconnect', ()=>{
+	console.log('disconnected from user');
+});
+});
+
+app.get("/", (req, res) => {
+res.sendFile(__dirname + "/client-side.html");
+});
+
+server.listen(port);
+
