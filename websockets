@@ -108,3 +108,5 @@ res.sendFile(__dirname + "/client-side.html");
 
 server.listen(port);
 
+run procedure:
+http://127.0.0.1:300/filename
