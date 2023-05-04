@@ -1,0 +1,72 @@
+step 1:
+	project -->+ new project(top left second line)
+step 2:
+	project name --> project3 -->
+	email: gowthaman@niit-karur.com
+	project owner (don't change)
+	create project
+step 3:
+	database deployment
+	buid database
+	m0 free (3rd one)
+	create
+step 4:
+	username: change
+	password: don't change
+	gowthaman99
+	vuYVEJqsqyoeiJbP
+	create user
+step 5:
+	choose cloud environment
+	ip address: 0.0.0.0
+	add entry button click
+	finish and close
+	goto database
+	
+	browse collection	
+	add my own data
+	database name:
+	collection name:
+	
+	insert document (sample one row)
+
+how to take sample code?
+	
+	dataservices --> connect --> connect your application
+	-->driver : node ,java,php, 
+	-->tick include:
+	-->copy code
+
+atlas: niit
+project o
+cluster0
+username : gowthamkk
+password: MIFVDLuImiNr19Y8
+
+----------------
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://gowthamkk:<password>@cluster0.d7tecmz.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+--------------------------------------------------success----------
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://gowthamkk:MIFVDLuImiNr19Y8@cluster0.d7tecmz.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("gdb").collection("gcol");
+  // perform actions on the collection object
+  collection.insertOne({rno:211,sname:"kannadasan",mark:91}).then((res)=>{
+    console.log("success")
+  }).catch((err)=>{
+    console.log("error type something")
+    console.log(err)
+  })
+ // client.close();
+});
+
