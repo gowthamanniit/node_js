@@ -4,7 +4,7 @@ step 1: open vs code
         open terminal :
           install the following ..
           
-          npm i body-parser ejs express nodemon stripe
+          npm i body-parser ejs express nodemon stripe path
 step 2:
   
            add server.js file inside your folder (paymentgatewaydemo)
