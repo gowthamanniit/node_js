@@ -1,0 +1,113 @@
+
+web site: www.stripe.com
+======================
+stripe account:
+karurgowthaman@gmail.com
+kAruRkarooR
+gowthaman@niit-karur.com
+Gowtmanak@12345           google authentication key:jbaq-fddg-wktw-miri-edkz
+publish key
+===========
+pk_test_51MqUSOHPpHm1jzKWTlgqYj9AWx5TFkyaU7n56lkff5vgxGp9DfDfJ7pyxMjsgbxsPS3GNk0OXTjWG07Tw1FPjEiJ00MQksqMzf
+
+pk_test_51LDMjLSDZcSNxSdSLaqwxXWQW2xfzsamb1XkQSzmQp4tKNTlaW9JzqgSTyxBJFoitRE29yVVEfVjRMNxEZMlWOno00ao2npGj3
+secret key
+========
+sk_test_51MqUSOHPpHm1jzKW2vuyZHZSAQcDJma3TGKf9Eb7sFDSyzR5ZcvtR3VPVpjZqQFXss9
+ocTyZ7yf2hdde6ZonToKV00VGXeP7Pm
+
+
+sk_test_51LDMjLSDZcSNxSdSSycIf558TVEDxY6CY24eXV9DWLdQssaQEAsSCvFFCktBEd1tHGKGvf96oxB6iLzAZZ2JcW3R00xE5XVMao
+================
+create new account top left corner:
+	1) name (myaccgowthaman)
+	2) country name  :us
+
+TV
+Fridge
+https://buy.stripe.com/test_fZecPN4jg1o2bHG8wx
+
+
+us routing number add bank account in stripe:
+================================
+routing number: 122105155
+account no:112223334444
+
+add funds: notes
+============
+https://stripe.com/docs/add-funds
+
+how long take time to add funds,bank,country,sample accno ... information....
+======================================================
+https://stripe.com/docs/payouts
+
+
+how to add customer  with debit card details?
+===============================
+click add customer (blue - right top)
+only type, name, email, country,state(don't give phone number, or extra info...)
+
+click custormer info -->actions(bule button)
+	              --> open customer portal
+	              --> add payment method
+	              --> enter test card details (don't give original card information)
+	              -->  enter card number 16 digits:
+		 only type this number(test): 4242 4242 4242 4242
+		expiration: 10/25  cvc: 123
+		zip code: 12345	
+		--> add button press
+	test: to check whether add/not test default payment method in customer option in dashboard.
+ 
+=============================
+2 days wait for account activating email.
+============================
+see your mail inbox--> activate paymensts
+================================
+
+	statement descriptor : anyname
+	website: www.livewireindia.com
+
+	ssn: 1234
+	address: type any valid us address
+	phone number: india phone number (sms verify)
+	tax: no thanks
+	
+	agree and acitvate: (don't forget in test mode)
+
+dashboard --> balance --> add to balance (visible)
+
+	add amount: $15000.00
+	
+	wait 1-5 days
+
+manual test: (don't wait 1-5 days - start immediately)
+=========
+	balance section in dashboard
+
+	Future refunds or disputes or negative balance  - pay out to bank(button)
+					  - press
+				available balance: $15000
+				amount to payout: $10.00
+				description: test product for sales
+					payout $10 --> button press
+check:
+=====
+	dashboard --> balance --> 
+
+	topup(credit-income)
+	payout(debit-exp)
+====================================
+how to close account ?
+ your acc name: ex: myaccgowthaman (edit)
+		last --> close or delete account.
+
+=====================================
+2 days wait for payment confirmation email
+=====================================
+write programs.
+========================
+
+
+
+
+

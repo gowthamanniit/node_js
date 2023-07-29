@@ -1,0 +1,63 @@
+Express:
+======
+	def: Dynamic or runtime web environment.
+
+	meaning: To get input from user, using HTML or React Forms.
+
+	prerequest in nodejs
+	==============
+	npm install express
+	
+	
+	how to import express module in node js?
+	=============================
+	var ex=require("express")
+	var app=ex()
+	
+
+	how to add get function ?
+	===================
+		use: to show all form input values in URL
+		       unsecurity
+
+	app.get('/userdefinefunctionname',(req,res)=>{
+		var data1=req.query["html form input name"]
+		var data2=req.query["html form input name"]	
+		console.log(data1,dat2)  // to print in terminal
+		res.send(data1+"  "+data2) // to print in brower
+		//note: res.send we can give only one time				
+	}).listen(portnumber)
+
+	note: portnumber is user define you can give 0 to 65535
+
+	how to run node js pgm?
+	terminal:
+	> node filename.js
+		port listing................
+
+	simple html or react program?
+	=====================
+
+	<html>
+	........
+	<body>
+	<form action="http://127.0.0.1:portnumber/functionname">
+		<input type="Text" name="t1" />
+		...........
+		<input type="submit" value="clickme"/>
+	</form>
+	</body>
+	</html>
+	
+	how to run html program?
+	===================
+	copy html path: right click -->copy path
+	
+	browser: paste 
+	(pre request: node js port listen must be running ....)
+	
+
+	
+	
+	
+

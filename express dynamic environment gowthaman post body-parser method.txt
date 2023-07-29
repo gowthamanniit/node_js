@@ -1,0 +1,67 @@
+Express: (body-parser)
+======
+	def: Dynamic or runtime web environment using post method.
+
+	meaning: To get input from user, using HTML or React Forms.
+		do not show any form input values in URL.
+
+	prerequest in nodejs
+	==============
+	npm install express
+	npm insall body-parser
+	
+	
+	how to import express and body-parser module in node js?
+	=============================
+	var ex=require("express")
+	var app=ex()
+	var bodyparser=require("body-parser")
+
+	var urlencodedparser=bodyparser.urlencoded({extended:false})	
+
+	how to add post function ?
+	===================
+		use: do not show all form input values in URL
+		      security purpose
+
+	app.post('/userdefinefunctionname',urlencodedparser,(req,res)=>{
+		var data1=req.body.t1
+		var data2=req.body.t2
+		console.log(data1,dat2)  // to print in terminal
+		res.send(data1+"  "+data2) // to print in brower
+		//note: res.send we can give only one time				
+	}).listen(portnumber)
+
+	note: portnumber is user define you can give 0 to 65535
+
+	how to run node js pgm?
+	terminal:
+	> node filename.js
+		port listing................
+
+	simple html or react program?
+	=====================
+
+	<html>
+	........
+	<body>
+	<form action="http://127.0.0.1:portnumber/functionname" method="post">
+		<input type="Text" name="t1" />
+		...........
+		<input type="submit" value="clickme"/>
+	</form>
+	</body>
+	</html>
+	
+	how to run html program?
+	===================
+	copy html path: right click -->copy path
+	
+	browser: paste 
+	(pre request: node js port listen must be running ....)
+	
+	test brower: do not show form input values in URL
+	
+	
+	
+
