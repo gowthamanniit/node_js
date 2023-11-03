@@ -3,8 +3,10 @@ Web-Socket in Node.js
 What is a Web Socket? 
 Web Socket is a protocol that provides full-duplex(multiway) communication 
 i.e allows communication in both directions simultaneously. 
-It is a modern web technology in which there is a continuous connection between the user’s browser(client) and the server. 
-In this type of communication, between the web server and the web browser, both of them can send messages to each other at any point in time.
+It is a modern web technology 
+in which there is a continuous connection between the user’s browser(client) and the server. 
+In this type of communication, between the web server and the web browser,
+both of them can send messages to each other at any point in time.
 
 npm install socket.io --save
  npm install express --save
