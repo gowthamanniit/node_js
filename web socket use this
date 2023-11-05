@@ -1,0 +1,74 @@
+// installation:
+  npm install socket.io --save
+  npm install express --save
+// server.js
+const app=require("express")()
+const socketIO=require('socket.io')
+const http=require("http")
+const port=process.env.PORT||3000
+let server=http.createServer(app)
+var io=socketIO(server)
+
+// called function
+
+io.on('connection',(socket)=>{
+
+	socket.on('createMessage', (newMessage)=>{
+		console.log('newMessage---> from client', newMessage);
+	});
+
+})
+
+app.get("/", (req, res) => {
+	//res.sendFile(__dirname + "/clientpgm.html");
+	res.sendFile("C:/Users/live/Desktop/clientpgm.html");
+	});
+	
+server.listen(port);
+console.log("port listening .... 3000")
+
+// clientpgm.html (you can save any location or same folder)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		function mydata()
+		{			
+			//alert("test");
+			var socket=io();
+			var data=document.getElementById("t1").value;
+			var email=document.getElementById("t2").value;
+			// calling function
+		socket.emit('createMessage', {	
+					to:email,
+					text:data
+			});
+		}
+	</script>
+</head>
+<body>
+	<form id='message-form' name="ff">
+		<input id="t1" type="text" placeholder="Message"
+				autofocus autocomplete="off"/>
+		<br>
+		<input id="t2" type="email" placeholder="Enter Email id"
+			autofocus autocomplete="off"/>
+		
+		<input type="button" onclick="mydata()" value="send data">
+		</form>
+</body>
+</html>
+
+// run server.js
+
+node server.js
+
+// open browser
+
+http://127.0.0.1:portnumber
