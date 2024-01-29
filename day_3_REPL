@@ -1,8 +1,10 @@
 REPL stands for Read Eval Print Loop
 it represents a computer environment like a Windows console or Unix/Linux shell 
-where a command is entered and the system responds with an output in an interactive mode
+where a command is entered and the system responds 
+with an output in an interactive mode
 
-Read − Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
+Read − Reads user's input, parses the input into 
+JavaScript data-structure, and stores in memory.
 
 Eval − Takes and evaluates the data structure.
 
