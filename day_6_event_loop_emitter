@@ -8,7 +8,26 @@ Node.js has multiple in-built events available through events module and
 EventEmitter class which are used to bind events and event-listeners
 
 EventEmitter provides multiple properties like on and emit. 
-on property is used to bind a function with the event and emit is used to fire an event.
+on property is used to bind a function with the event and
+emit is used to fire an event.
+
+
+note:
+emit-------> fire event(calling function)
+		like client
+		one or more request send to on properties
+
+on---------->bind event( called function)
+		like server
+		only one 
+		purpose: send response to client(emit)
+
+how to install event?
+
+goto terminal
+set your project folder
+d:/project folder>npm install events
+
 -----------------------------------------------
 // Import events module
 var events = require('events');
