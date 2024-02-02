@@ -109,4 +109,12 @@ for (x of buf.values()) {
 }
 o/p 97 98 99....
 =============================
-
+var buf=Buffer.from("abcdefghijklmnopqrstuvwxyz")
+for(x of buf.values())
+{
+    console.log(x,"-")
+}
+for(x of buf.toString())
+{
+    console.log(x,"-")
+}
