@@ -118,3 +118,26 @@ for(x of buf.toString())
 {
     console.log(x,"-")
 }
+
+task: (insert  middle)
+=====
+var buf=Buffer.from("abcdefghijklmnopqrstuvwxyz")
+var ip="ajithkumar"
+var index=3
+var totlen=buf.length+ip.length
+var buf1=Buffer.alloc(totlen)
+console.log(totlen)
+buf1.write(ip,index)
+console.log(buf1)
+console.log(buf1.toString())
+
+var i=-1;
+for(x of buf.toString())
+{
+    ++i
+    if(i<index)
+    buf1.write(x,i)
+    else
+    buf1.write(x,i+ip.length)    
+}
+console.log(buf1.toString())
