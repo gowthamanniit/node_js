@@ -141,3 +141,6 @@ for(x of buf.toString())
     buf1.write(x,i+ip.length)    
 }
 console.log(buf1.toString())
+
+task: (remove ginven range start and end)
+====  
