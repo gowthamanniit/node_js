@@ -143,4 +143,5 @@ for(x of buf.toString())
 console.log(buf1.toString())
 
 task: (remove ginven range start and end)
+task: (display only vowels)
 ====  
