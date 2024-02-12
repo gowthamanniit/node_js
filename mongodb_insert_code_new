@@ -1,0 +1,32 @@
+>npm install mongodb (version 6 & 7) 
+suppose version:5 npm i mongo
+
+const { MongoClient } = require("mongodb")
+console.log("module ok")
+//const uri="mongodb://127.0.0.1:27017"
+const client=new MongoClient("mongodb://127.0.0.1:27017")
+client.connect()
+console.log("connect success")
+
+var mydata={sno:12,sname:"bhuvaneshwari",mark:89}
+
+try
+{
+    const dataset=client.db("college").collection("details").insertOne(mydata)
+    console.log("successfully inserted")
+   /*
+    console.log(dataset)
+    console.log(JSON.stringify(dataset))
+    console.log(dataset.toString())
+    console.log(JSON.parse(JSON.stringify(dataset)))
+    */
+    dataset.then((result)=> {
+        console.log(result) // "Some User token"
+     })
+}
+catch
+{
+    console.log("error")
+    client.close()
+}
+
