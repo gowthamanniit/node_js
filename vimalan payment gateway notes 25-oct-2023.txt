@@ -29,7 +29,7 @@ payment gateway:
  --> submit -->wait for 2 days for activate payments.
 
 ==================================
-activate payments click on your mail
+activate payments/complete(new) click on your mail
 
 	--> statement descriptor : anyname (yourname)
 	--> website: www.livewire.com
@@ -38,7 +38,7 @@ activate payments click on your mail
 	--> sample any: don't verify : 
 		555 22 1234
 	--> tax: no thanks
-	--> agree and activate (pls check in test mode--		>developer on --> orange color)
+	--> agree and activate (pls check in test mode-->developer on --> orange color)
 
 dashboard --> balance --> add to balance (visible)
 
