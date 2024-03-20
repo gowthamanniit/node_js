@@ -1,0 +1,105 @@
+step 1:
+https://www.mongodb.com/atlas/database
+signin with google
+step 2:
+top left: project -->create new project
+step 3:
+	database deployment
+	build database
+	mo free (3rd one)
+	aws(choose)
+	create
+step 4:
+	copy username and password 
+	paste into notepad and save it.
+
+username:gowthaman
+password:6blJUliVOJzumx5E
+
+step 5:
+	drivers click-->
+	
+	sample code (node js + version)
+	copy and paste it
+
+step 6:
+	database deployment(cluster , web ip-->automatic)	
+
+	browse collections.
+
+	create database:
+		database name
+		collectionname
+		empty 3rd (don't use capped collection)
+		create database
+
+	insert sample records
+
+
+// cloud default code
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://gowthaman:6blJUliVOJzumx5E@cluster0.gwnnntc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+
+
+// gowthaman cloud code
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://gowthaman:6blJUliVOJzumx5E@cluster0.gwnnntc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+async function run() {
+    // my typing gowthaman line no. 14 to 22
+    var mydata={
+        billno:2400002,
+        sname:"ajithkumar",
+        course:"FULLSTACK",
+        date:"20-Mar-2024",
+        billamt:6500
+    }
+    //
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    //await client.db("admin").command({ ping: 1 });
+    var dataset=await client.db("lwbillbook").collection("billdetails").insertOne(mydata)
+    console.log(dataset);
+    console.log(JSON.stringify(dataset));
+    //console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
