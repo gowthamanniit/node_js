@@ -6,7 +6,8 @@ All the APIs of Node are written in such a way that they support callbacks
 two types:
 ==========
 1) Blocking code
-2) Non-Blocking code(-Node.js highly scalable, as it can process a high number of requests without waiting or no block for any function to return results.
+2) Non-Blocking code(-Node.js highly scalable, as it can process a high number of requests 
+without waiting or no block for any function to return results.
                      -content of the file must be parameter)
                      
 ex: blocking code:
