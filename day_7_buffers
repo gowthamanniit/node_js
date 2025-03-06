@@ -1,5 +1,8 @@
-Node provides Buffer class which provides instances to store raw data similar to an array of integers
-Buffer class is a global class that can be accessed in an application without importing the buffer module.
+Node provides Buffer class which provides instances 
+to store raw data similar to an array of integers
+
+Buffer class is a global class that can be accessed in 
+an application without importing the buffer module.
 
 Creating Buffers
 ================
