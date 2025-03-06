@@ -112,6 +112,8 @@ for (x of buf.values()) {
   console.log(x);
 }
 o/p 97 98 99....
+String.fromCharCode(ascii value)
+
 =============================
 var buf=Buffer.from("abcdefghijklmnopqrstuvwxyz")
 for(x of buf.values())
