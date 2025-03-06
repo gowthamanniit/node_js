@@ -11,7 +11,8 @@ var buf = new Buffer(10);
 method:2
 var buf = new Buffer([10, 20, 30, 40, 50]);
 method:3
-var buf = new Buffer("Simply Easy Learning", "utf-8"); //utf-8 is default , extra we can add ascii,...
+var buf = new Buffer("Simply Easy Learning", "utf-8"); 
+//utf-8 is default , extra we can add ascii,...
 Writing to Buffers
 ===================
 buf.write(string[, offset][, length][, encoding])
